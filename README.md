@@ -1,6 +1,2 @@
 # basecode
-
-
-test1
-
-test2
+this is a spring boot demo by cx
