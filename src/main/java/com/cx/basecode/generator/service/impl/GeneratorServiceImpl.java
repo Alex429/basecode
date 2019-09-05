@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.cx.basecode.common.entity.MyConstant;
 import com.cx.basecode.common.entity.QueryRequest;
-import com.cx.basecode.common.util.SortUtil;
+import com.cx.basecode.common.utils.SortUtil;
 import com.cx.basecode.generator.entity.Column;
 import com.cx.basecode.generator.entity.Table;
 import com.cx.basecode.generator.mapper.GeneratorMapper;

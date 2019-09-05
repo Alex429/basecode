@@ -1,4 +1,4 @@
-package com.cx.basecode.common.util;
+package com.cx.basecode.common.utils;
 
 import com.cx.basecode.common.entity.MyConstant;
 import com.google.common.base.Preconditions;

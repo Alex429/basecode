@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.cx.basecode.common.util.DateUtil;
+import com.cx.basecode.common.utils.DateUtil;
 import lombok.Data;
 
 import javax.validation.constraints.Size;

@@ -2,8 +2,8 @@ package com.cx.basecode.generator.helper;
 
 import com.alibaba.fastjson.JSONObject;
 import com.cx.basecode.common.annotation.Helper;
-import com.cx.basecode.common.util.AddressUtil;
-import com.cx.basecode.common.util.MyUtil;
+import com.cx.basecode.common.utils.AddressUtil;
+import com.cx.basecode.common.utils.MyUtil;
 import com.cx.basecode.generator.entity.Column;
 import com.cx.basecode.generator.entity.GeneratorConfig;
 import com.cx.basecode.generator.entity.GeneratorConstant;

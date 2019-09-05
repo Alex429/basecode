@@ -1,4 +1,4 @@
-package com.cx.basecode.common.util;
+package com.cx.basecode.common.utils;
 
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.cx.basecode.common.entity.MyConstant;

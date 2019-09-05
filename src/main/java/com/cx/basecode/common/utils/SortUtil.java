@@ -1,4 +1,4 @@
-package com.cx.basecode.common.util;
+package com.cx.basecode.common.utils;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;

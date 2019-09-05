@@ -1,7 +1,7 @@
 package com.cx.basecode.generator.controller;
 
 import com.cx.basecode.common.entity.MyConstant;
-import com.cx.basecode.common.util.MyUtil;
+import com.cx.basecode.common.utils.MyUtil;
 import com.cx.basecode.generator.entity.GeneratorConfig;
 import com.cx.basecode.generator.service.IGeneratorConfigService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.cx.basecode.common.util;
+package com.cx.basecode.common.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

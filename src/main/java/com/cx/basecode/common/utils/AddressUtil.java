@@ -1,4 +1,4 @@
-package com.cx.basecode.common.util;
+package com.cx.basecode.common.utils;
 
 import org.apache.commons.io.FileUtils;
 import org.lionsoul.ip2region.DataBlock;
