@@ -1,12 +1,12 @@
 package cc.mrbird.febs.system.controller;
 
-import cc.mrbird.febs.common.annotation.Log;
-import cc.mrbird.febs.common.utils.FebsUtil;
-import cc.mrbird.febs.common.entity.FebsConstant;
-import cc.mrbird.febs.common.controller.BaseController;
-import cc.mrbird.febs.common.entity.FebsResponse;
-import cc.mrbird.febs.common.entity.QueryRequest;
-import cc.mrbird.febs.common.exception.FebsException;
+import com.cx.basecode.common.annotation.Log;
+import com.cx.basecode.common.utils.FebsUtil;
+import com.cx.basecode.common.entity.FebsConstant;
+import com.cx.basecode.common.controller.BaseController;
+import com.cx.basecode.common.entity.FebsResponse;
+import com.cx.basecode.common.entity.QueryRequest;
+import com.cx.basecode.common.exception.FebsException;
 import ${basePackage}.${entityPackage}.${className};
 import ${basePackage}.${servicePackage}.I${className}Service;
 import com.wuwenze.poi.ExcelKit;
