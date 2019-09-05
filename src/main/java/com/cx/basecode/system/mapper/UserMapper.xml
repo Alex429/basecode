@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cx.basecode.system.mapper.UserMapper">
+
+    <resultMap id="user" type="com.cx.basecode.system.entity.User">
+        <id column="USER_ID" jdbcType="bigint" property="userId"/>
+        <result column="USERNAME" jdbcType="varchar" property="username"/>
+        <result column="PASSWORD" jdbcType="varchar" property="password"/>
+        <result column="DEPT_ID" jdbcType="bigint" property="deptId"/>
+        <result column="EMAIL" jdbcType="varchar" property="email"/>
+        <result column="MOBILE" jdbcType="varchar" property="mobile"/>
+        <result column="STATUS" jdbcType="char" property="status"/>
+        <result column="CREATE_TIME" jdbcType="datetime" property="createTime"/>
+        <result column="MODIFY_TIME" jdbcType="datetime" property="modifyTime"/>
+        <result column="LAST_LOGIN_TIME" jdbcType="datetime" property="lastLoginTime"/>
+        <result column="SSEX" jdbcType="char" property="ssex"/>
+        <result column="IS_TAB" jdbcType="char" property="isTab"/>
+        <result column="THEME" jdbcType="varchar" property="theme"/>
+        <result column="AVATAR" jdbcType="varchar" property="avatar"/>
+        <result column="DESCRIPTION" jdbcType="varchar" property="description"/>
+    </resultMap>
+</mapper>
