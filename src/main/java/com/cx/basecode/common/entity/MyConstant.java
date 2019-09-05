@@ -25,4 +25,7 @@ public class MyConstant {
      * getDataTable 中 HashMap 默认的初始化容量
      */
     public static final int DATA_MAP_INITIAL_CAPACITY = 4;
+
+
+    public static final String TIP_ID_CANNOT_BE_NULL = "id不能为空";
 }

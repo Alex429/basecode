@@ -23,6 +23,6 @@ public class GeneratorConfigServiceImpl extends ServiceImpl<GeneratorConfigMappe
 
     @Override
     public void updateGeneratorConfig(GeneratorConfig generatorConfig) {
-
+        this.saveOrUpdate(generatorConfig);
     }
 }
