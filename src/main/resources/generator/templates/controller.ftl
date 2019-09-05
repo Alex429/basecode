@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * ${tableComment} Controller
+ *${tableComment} Controller
  *
  * @author ${author}
  * @date ${date}
@@ -39,7 +39,7 @@ public class ${className}Controller extends BaseController {
     private I${className}Service ${className?uncap_first}Service;
 
     @GetMapping(MyConstant.VIEW_PREFIX + "${className?uncap_first}")
-    public String ${className?uncap_first}Index(){
+    public String ${className?uncap_first}Index() {
         return MyUtil.view("${className?uncap_first}/${className?uncap_first}");
     }
 
