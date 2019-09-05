@@ -1,8 +1,7 @@
 package com.cx.basecode.generator;
 
 import com.cx.basecode.common.exception.MyException;
-import com.cx.basecode.common.util.FileUtil;
-import com.cx.basecode.common.util.MyUtil;
+import com.cx.basecode.common.utils.MyUtil;
 import com.cx.basecode.generator.entity.Column;
 import com.cx.basecode.generator.entity.GeneratorConfig;
 import com.cx.basecode.generator.entity.GeneratorConstant;
@@ -42,7 +41,10 @@ public class GeneratorTable {
      */
     @Test
     public void generatorTable() {
-        String name = "t_user";
+//        执行前，更改路径
+        String pathCheck = GeneratorConstant.TEMP_PATH ;
+//        输入表名
+        String name = "";
         String remark = "";
         if (StringUtils.isBlank(name)) {
             return;
