@@ -20,6 +20,12 @@ public class GeneratorConstant {
      * 生成代码的临时目录
      */
     public static final String TEMP_PATH = "febs_gen_temp/";
+//    /**
+//     * 生成代码的临时目录
+//     * 警告，用完必须注释！
+//     * 代码直接生成到项目里，仅供开发使用，
+//     */
+//    public static final String TEMP_PATH = ".";
 
     /**
      * java类型文件后缀
