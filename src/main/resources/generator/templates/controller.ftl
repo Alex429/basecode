@@ -1,12 +1,12 @@
-package cc.mrbird.febs.system.controller;
+package com.cx.basecode.system.controller;
 
 import com.cx.basecode.common.annotation.Log;
-import com.cx.basecode.common.utils.FebsUtil;
-import com.cx.basecode.common.entity.FebsConstant;
+import com.cx.basecode.common.utils.MyUtil;
+import com.cx.basecode.common.entity.MyConstant;
 import com.cx.basecode.common.controller.BaseController;
-import com.cx.basecode.common.entity.FebsResponse;
+import com.cx.basecode.common.entity.BaseResponse;
 import com.cx.basecode.common.entity.QueryRequest;
-import com.cx.basecode.common.exception.FebsException;
+import com.cx.basecode.common.exception.MyException;
 import ${basePackage}.${entityPackage}.${className};
 import ${basePackage}.${servicePackage}.I${className}Service;
 import com.wuwenze.poi.ExcelKit;
@@ -38,38 +38,38 @@ public class ${className}Controller extends BaseController {
     @Autowired
     private I${className}Service ${className?uncap_first}Service;
 
-    @GetMapping(FebsConstant.VIEW_PREFIX + "${className?uncap_first}")
+    @GetMapping(MyConstant.VIEW_PREFIX + "${className?uncap_first}")
     public String ${className?uncap_first}Index(){
-        return FebsUtil.view("${className?uncap_first}/${className?uncap_first}");
+        return MyUtil.view("${className?uncap_first}/${className?uncap_first}");
     }
 
     @GetMapping("${className?uncap_first}")
     @ResponseBody
     @RequiresPermissions("${className?uncap_first}:list")
-    public FebsResponse getAll${className}s(${className} ${className?uncap_first}) {
-        return new FebsResponse().success().data(${className?uncap_first}Service.find${className}s(${className?uncap_first}));
+    public BaseResponse getAll${className}s(${className} ${className?uncap_first}) {
+        return new BaseResponse().success().data(${className?uncap_first}Service.find${className}s(${className?uncap_first}));
     }
 
     @GetMapping("${className?uncap_first}/list")
     @ResponseBody
     @RequiresPermissions("${className?uncap_first}:list")
-    public FebsResponse ${className?uncap_first}List(QueryRequest request, ${className} ${className?uncap_first}) {
+    public BaseResponse ${className?uncap_first}List(QueryRequest request, ${className} ${className?uncap_first}) {
         Map<String, Object> dataTable = getDataTable(this.${className?uncap_first}Service.find${className}s(request, ${className?uncap_first}));
-        return new FebsResponse().success().data(dataTable);
+        return new BaseResponse().success().data(dataTable);
     }
 
     @Log("新增${className}")
     @PostMapping("${className?uncap_first}")
     @ResponseBody
     @RequiresPermissions("${className?uncap_first}:add")
-    public FebsResponse add${className}(@Valid ${className} ${className?uncap_first}) throws FebsException {
+    public BaseResponse add${className}(@Valid ${className} ${className?uncap_first}) throws MyException {
         try {
             this.${className?uncap_first}Service.create${className}(${className?uncap_first});
-            return new FebsResponse().success();
+            return new BaseResponse().success();
         } catch (Exception e) {
             String message = "新增${className}失败";
             log.error(message, e);
-            throw new FebsException(message);
+            throw new MyException(message);
         }
     }
 
@@ -77,14 +77,14 @@ public class ${className}Controller extends BaseController {
     @GetMapping("${className?uncap_first}/delete")
     @ResponseBody
     @RequiresPermissions("${className?uncap_first}:delete")
-    public FebsResponse delete${className}(${className} ${className?uncap_first}) throws FebsException {
+    public BaseResponse delete${className}(${className} ${className?uncap_first}) throws MyException {
         try {
             this.${className?uncap_first}Service.delete${className}(${className?uncap_first});
-            return new FebsResponse().success();
+            return new BaseResponse().success();
         } catch (Exception e) {
             String message = "删除${className}失败";
             log.error(message, e);
-            throw new FebsException(message);
+            throw new MyException(message);
         }
     }
 
@@ -92,28 +92,28 @@ public class ${className}Controller extends BaseController {
     @PostMapping("${className?uncap_first}/update")
     @ResponseBody
     @RequiresPermissions("${className?uncap_first}:update")
-    public FebsResponse update${className}(${className} ${className?uncap_first}) throws FebsException {
+    public BaseResponse update${className}(${className} ${className?uncap_first}) throws MyException {
         try {
             this.${className?uncap_first}Service.update${className}(${className?uncap_first});
-            return new FebsResponse().success();
+            return new BaseResponse().success();
         } catch (Exception e) {
             String message = "修改${className}失败";
             log.error(message, e);
-            throw new FebsException(message);
+            throw new MyException(message);
         }
     }
 
     @PostMapping("${className?uncap_first}/excel")
     @ResponseBody
     @RequiresPermissions("${className?uncap_first}:export")
-    public void export(QueryRequest queryRequest, ${className} ${className?uncap_first}, HttpServletResponse response) throws FebsException {
+    public void export(QueryRequest queryRequest, ${className} ${className?uncap_first}, HttpServletResponse response) throws MyException {
         try {
             List<${className}> ${className?uncap_first}s = this.${className?uncap_first}Service.find${className}s(queryRequest, ${className?uncap_first}).getRecords();
             ExcelKit.$Export(${className}.class, response).downXlsx(${className?uncap_first}s, false);
         } catch (Exception e) {
             String message = "导出Excel失败";
             log.error(message, e);
-            throw new FebsException(message);
+            throw new MyException(message);
         }
     }
 }

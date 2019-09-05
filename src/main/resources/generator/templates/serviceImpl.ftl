@@ -1,5 +1,6 @@
 package ${basePackage}.${serviceImplPackage};
 
+import com.cx.basecode.common.entity.QueryRequest;
 import ${basePackage}.${entityPackage}.${className};
 import ${basePackage}.${mapperPackage}.${className}Mapper;
 import ${basePackage}.${servicePackage}.I${className}Service;
@@ -12,6 +13,8 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+
+import java.util.List;
 
 /**
  * ${tableComment} Service实现
