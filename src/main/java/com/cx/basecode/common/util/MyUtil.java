@@ -1,6 +1,7 @@
 package com.cx.basecode.common.util;
 
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
+import com.cx.basecode.common.entity.MyConstant;
 import org.apache.commons.lang3.StringUtils;
 
 import javax.servlet.http.HttpServletRequest;
@@ -74,5 +75,7 @@ public class MyUtil {
         return matcher.matches();
     }
 
-
+    public static String view(String viewName) {
+        return MyConstant.VIEW_PREFIX + viewName;
+    }
 }
