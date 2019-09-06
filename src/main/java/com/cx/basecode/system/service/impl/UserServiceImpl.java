@@ -45,6 +45,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
     }
 
     @Override
+    public User findByName(String username) {
+        return this.baseMapper.findByName(username);
+    }
+
+    @Override
     @Transactional
     public void createUser(User user) {
         this.save(user);

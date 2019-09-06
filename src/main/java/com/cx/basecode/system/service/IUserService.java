@@ -32,6 +32,7 @@ public interface IUserService extends IService<User> {
      */
     List<User> findUsers(User user);
 
+    User findByName(String username);
     /**
      * 新增
      *
