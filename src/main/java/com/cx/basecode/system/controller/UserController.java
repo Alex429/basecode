@@ -25,10 +25,10 @@ import java.util.List;
 import java.util.Map;
 
 /**
- *  Controller
+ * Controller
  *
  * @author alex
- * @date 2019-09-05 17:39:42
+ * @date 2019-09-06 15:34:53
  */
 @Slf4j
 @Validated
@@ -39,7 +39,7 @@ public class UserController extends BaseController {
     private IUserService userService;
 
     @GetMapping(MyConstant.VIEW_PREFIX + "user")
-    public String userIndex(){
+    public String userIndex() {
         return MyUtil.view("user/user");
     }
 

@@ -8,6 +8,7 @@ import com.cx.basecode.common.utils.DateUtil;
 import lombok.Data;
 
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 /**
@@ -16,7 +17,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @TableName("t_generator_config")
-public class GeneratorConfig {
+public class GeneratorConfig implements Serializable{
     public static final String TRIM_YES = "1";
     public static final String TRIM_NO = "0";
 
